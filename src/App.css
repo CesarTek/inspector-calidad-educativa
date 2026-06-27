@@ -332,19 +332,31 @@ body {
 }
 
 /* --- REGLAS UNIFICADAS --- */
-.modal {
-  position: fixed;
-  inset: 0; /* Reemplaza top, left, width 100% y height 100% */
-  background: rgba(0, 0, 0, .7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px;
+
+    z-index:999;
+
 }
 
 .modal-contenido {
   background: white;
   width: 600px; /* Toma el valor de la última regla definida */
   max-width: 90%;
+  overflow-y: auto; /* Añadido de la segunda declaración */
   padding: 30px;
   border-radius: 15px;
   text-align: center; /* Se mantiene de la primera declaración */
@@ -845,5 +857,43 @@ body {
     padding:20px;
 
 }
+
+}
+@media (max-width:768px){
+
+    .modal-contenido{
+
+        width:100%;
+
+        padding:20px;
+
+        max-height:85vh;
+
+    }
+
+}
+@media (max-width:480px){
+
+    .modal-contenido{
+
+        padding:15px;
+
+        border-radius:12px;
+
+    }
+
+    .btn-opcion{
+
+        font-size:.95rem;
+
+        padding:10px;
+
+    }
+
+    .btn-continuar{
+
+        width:100%;
+
+    }
 
 }
